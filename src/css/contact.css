@@ -1,0 +1,86 @@
+.contact {
+    background-image: url('../assets/image/reservation-bg.jpg');
+    padding: 8rem 0;
+    margin-top: 5rem;
+    color: var(--white);
+}
+
+.contact > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+  
+.contact header h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 40rem;
+    margin-top: 1rem;
+}
+
+.contact header p {
+    margin: 2rem 0 4rem;
+}
+
+.contact header h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .95rem;
+}
+
+.contact h3::before {
+    content: '';
+    width: 2rem;
+    height: 1px;
+    display: block;
+    background-color: var(--white);
+}
+.contact__left-info  {
+    display: flex;
+    gap: 1rem;
+}
+.contact__left-info div {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    color: var(--black);
+    text-align: center;
+    padding: 0 0 1rem;
+}
+
+.contact__left-info div strong {
+    font-size: 1.2rem;
+}
+
+.contact__left-info div a {
+    color: var(--black);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.contact__left-info div a:hover {
+    color: var(--red);
+}
+
+.contact__left-info .contact__left-info-icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-radius: 4rem;
+    
+    background-color: var(--red);
+    transform: translateY(-50%);
+}
+.contact__left-info .contact__left-info-icon i {
+    line-height: 4rem;
+
+}

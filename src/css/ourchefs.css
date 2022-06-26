@@ -1,0 +1,109 @@
+.ourChefs {
+    padding-top: 10rem !important;
+}
+
+.ourChefs header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.ourChefs header h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 30rem;
+    color: var(--black);
+  }
+  
+.ourChefs header h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--red);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .95rem;
+}
+
+.ourChefs ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 20rem));
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 2rem;
+    list-style: none;
+}
+  
+.ourChefs__card {
+    --time-transition: .2s;
+    transition: var(--time-transition);
+    text-align: center;
+    padding: .5rem;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    color: var(--black);
+}
+
+.ourChefs__card img {
+    border-radius: 5px;
+}
+
+.ourChefs__card div {
+    position: relative;
+}
+
+.ourChefs__card div img {
+    transition: var(--time-transition);
+}
+
+.ourChefs__card-social {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.ourChefs__card-social li a{
+    display: block;
+    transition: var(--time-transition);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 2.5rem;
+}
+
+.ourChefs__card strong {
+    font-size: 1.5rem;
+    transition: var(--time-transition);
+}
+
+.ourChefs__card footer {
+    padding: 1rem 0;
+}
+
+.ourChefs__card:hover {
+    border-color: var(--red);
+}
+
+.ourChefs__card:hover strong {
+    color: var(--red);
+}
+
+.ourChefs__card:hover .ourChefs__card-social {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ourChefs__card:hover div img {
+    filter: brightness(30%);
+}

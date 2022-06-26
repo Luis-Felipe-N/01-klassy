@@ -1,0 +1,71 @@
+.ourMenu {
+    background-color: var(--ligth-pink);
+    margin-top: 6rem;
+    padding: 100px 0 0 0;
+  }
+  
+  .ourMenu__carousel-container {
+    margin: 3rem 0;
+  }
+  
+  .ourMenu__carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+    /* align-items: center; */
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 2rem 4rem;
+  
+    list-style: none;
+    transition: .2s;
+  }
+  
+  .ourMenu__carousel__item:hover figure figcaption {
+    bottom: 0;
+  }
+  
+  .ourMenu__carousel__item figure {
+    position: relative;
+    overflow: hidden  ;
+  }
+
+  .ourMenu__carousel__item figure img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ourMenu__carousel__item figure figcaption {
+    position: absolute;
+    bottom: -6.5rem;
+    transition: .2s;
+  
+    background-color: var(--red);
+    width: 100%;
+    padding: 0 1.5rem;
+    color: var(--white);
+  }
+  
+  .ourMenu__carousel__item figure figcaption h1 {
+    padding: 1rem 0;
+  }
+  
+  .ourMenu__carousel__item figure figcaption a {
+    padding: 1rem 0;
+    display: block;
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--white);
+  }
+  
+  /* .ourMenu__carousel__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .ourMenu__carousel__controls button {
+    padding: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: var(--red);
+  } */
