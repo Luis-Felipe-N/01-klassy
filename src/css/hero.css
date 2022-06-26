@@ -5,7 +5,7 @@
   }
   
   .hero__left {
-    background-image: url('./src/assets/image/top-left-bg.jpg');
+    background-image: url('../assets/image/top-left-bg.jpg');
     display: flex;
     align-items: center;
     justify-content: center;
