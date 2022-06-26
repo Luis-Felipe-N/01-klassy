@@ -31,8 +31,9 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header class="header container">
-      <img src="./src/assets/image/logo.png" alt="Logo klassy since 1990" />
+    <header class="header">
+      <div class="container">
+              <img src="./src/assets/image/logo.png" alt="Logo klassy since 1990" />
       <nav>
         <ul class="header__menu">
           <li class="header__menu_item">
@@ -69,6 +70,10 @@
           </li>
         </ul>
       </nav>
+      <button class="btnMenu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor" /><path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor" /><path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor" /></svg>
+      </button>
+      </div>
     </header>
     <main>
       <section class="hero">
@@ -199,7 +204,7 @@
         </div>
       </section>
       <section class="ourChefs container">
-        <header>
+        <header class="header-section-center">
           <h3>Nossos chefes</h3>
           <h2>Oferecemos os melhores igredientes para você</h2>
         </header>
@@ -303,24 +308,321 @@
               </div>
             </div>
           </div>
-          <form>
-            <h2></h2>
-            <input type="text" placeholder="seu nome">
-            <input type="email" placeholder="Seu email">
-            <input type="text" placeholder="Número">
-            <fieldset>
+          <form class="contact__form">
+            <h2>Table Reservation
+            </h2>
+            <div>
+              <input type="text" placeholder="seu nome">
+              <input type="email" placeholder="Seu email">
+              <input type="text" placeholder="Número">
               <select>
-                <option>Time</option>
+                <option selected disabled >Número da mesa</option>
+                <option value="">1</option>
+                <option value="2">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
               </select>
-            </fieldset>
-            <textarea placeholder="Mensagem"></textarea>
+              <input type="date" placeholder="Data">
+              <select>
+                <option selected disabled >Tipo da reserva</option>
+                <option>Jantar</option>
+                <option>Almoço</option>
+              </select>
+              <textarea placeholder="Mensagem"></textarea>
+            </div>
             <button>Marcar reserva</button>
           </form>
         </div>
       </section>
+      <section class="offers container">
+        <header class="header-section-center">
+          <h3>Nossos chefes</h3>
+          <h2>Oferecemos os melhores igredientes para você</h2>
+        </header>
+        <nav>
+          <ul class="offers__tab">
+            <li class="active" tabindex="0" role="tab">
+              <div>
+                <figure>
+                  <img src="./src/assets/image/tab-icon-01.png" alt="">
+                <figcaption>
+                  <strong>Café da manhã</strong>
+                </figcaption>
+              </figure>
+              </div>
+            </li>
+            <li tabindex="0" role="tab">
+              <div>
+                <figure>
+                  <img src="./src/assets/image/tab-icon-02.png" alt="">
+                  <figcaption>
+                    <strong>Almoço</strong>
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+            <li tabindex="0" role="tab">
+              <div>
+                <figure>
+                  <img src="./src/assets/image/tab-icon-03.png" alt="">
+                  <figcaption>
+                    <strong>Janta</strong>
+                  </figcaption>
+                </figure>
+              </div>
+            </li>
+          </ul>
+        </nav>
+          <div>
+            <ul data-offersTab="1" class="offers__tab-items active">
+              <li style="--i: 1s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-01.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 1.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-02.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-03.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-04.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-05.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-06.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+            </ul>
+            <ul data-offersTab="2" class="offers__tab-items">
+              <li style="--i: 1s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-01.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 1.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-02.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-03.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-04.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-05.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-06.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+            </ul>
+            <ul data-offersTab="3" class="offers__tab-items">
+              <li style="--i: 1s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-01.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 1.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-02.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-03.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 2.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-04.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-05.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+              <li style="--i: 3.5s;" class="offers__tab-item">
+                <img src="./src/assets/image/tab-item-06.png" alt="">
+                <div>
+                  <h3>Nome do produto</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, illo. lore</p>
+                </div>
+                <div class="offers__tab-item-price">
+                  <strong>
+                    $9,00
+                  </strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__sociais">
+            <ul>
+              <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <img src="./src/assets/image/white-logo.png" alt="Logo">
+          <div class="footer__credits">
+            <p>Desenvolvido por <a href="https://luisnunes.me" target="_blank" rel="noopener noreferrer">Luis Felipe Nunes</a></p>
+            <p>Desing do <a href="https://www.free-css.com/free-css-templates" target="_blank" rel="noopener noreferrer">Free templates</a></p>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="./src/js/slider.js"></script>
     <script src="./src/js/carousel.js"></script>
+    <script src="./src/js/header.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

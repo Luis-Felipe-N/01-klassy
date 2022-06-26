@@ -1,5 +1,7 @@
 .contact {
     background-image: url('../assets/image/reservation-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 8rem 0;
     margin-top: 5rem;
     color: var(--white);
@@ -8,7 +10,7 @@
 .contact > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
 }
   
 .contact header h2 {
@@ -78,9 +80,87 @@
     border-radius: 4rem;
     
     background-color: var(--red);
+    color: var(--white);
     transform: translateY(-50%);
 }
 .contact__left-info .contact__left-info-icon i {
     line-height: 4rem;
 
+}
+
+.contact__form {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact__form h2 {
+    margin: 1rem 0 1.5rem;
+    font-size: 2rem
+}
+
+.contact__form > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+.contact__form > div input, .contact__form > div select {
+    height:3rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+    max-width: 100%;
+    font-size: .9rem;
+    background-color: var(--white);
+    color: rgba(0, 0, 0, .6);
+}
+
+.contact__form > div input:focus, 
+.contact__form > div select:focus, 
+.contact__form  textarea:focus {
+    outline-color: var(--red);
+}
+
+.contact__form > div select option {
+    padding: 1rem !important;
+}
+
+.contact__form  textarea {
+    border: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    grid-column: span 2;
+    padding: 1rem;
+    resize: none;
+}
+
+.contact__form  button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: var(--red);
+    
+}
+
+@media (max-width: 968px) {
+    .contact> div {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__form > div input, .contact__form > div select  {
+        grid-column: span 2;
+    }
+
+    .contact__left-info {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }

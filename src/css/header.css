@@ -1,9 +1,16 @@
 .header {
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  box-shadow: 0 0 20px rgba(  0, 0, 0, 0.4);
+}
+
+.header > div {
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
-  background-color: var(--white);
   position: relative;
 }
 
@@ -79,18 +86,38 @@
  z-index: 5;
 }
 
+.btnMenu {
+  display: none;
+}
+
 @media (max-width: 800px) {
-  .header nav {
-    transform: rotateZ(180deg);
+
+  .btnMenu {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    background-color: transparent;
+  }
+
+  .header nav{
+    box-shadow: 0 0 20px rgba(  0, 0, 0, 0.3);
+    visibility: hidden;
+    max-height: 0;
     position: absolute;
     background-color: #f7f7f7;
     top: 6.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
-    margin: 0 1rem;
     max-width: 40rem;
     width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .header nav.active {
+    transition: max-height .2s;
+    visibility: visible;
+    max-height: 40rem;
   }
 
   .header nav ul {
